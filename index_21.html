@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Garage De Cocker — Erkend Citroën, Peugeot en DS specialist in Erembodegem (Aalst). Eurorepar Car Service partner. Onderhoud, herstelling en tweedehandswagens.">
+<title>Garage De Cocker — Specialist Citroën, Peugeot & DS | Erembodegem (Aalst)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;cursor:pointer;color:inherit}
+img{display:block;max-width:100%}
+
+/* ── LAYOUT ── */
+.w{width:100%;max-width:1100px;margin:0 auto;padding:0 60px}
+.sec{display:block;width:100%;padding:96px 0}
+.sec-gr{background:#f7f6f3}
+.sec-zw{background:#111}
+.sec-wt{background:#fff}
+
+/* ── TYPOGRAFIE ── */
+.lbl{display:inline-block;font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#E8490F;margin-bottom:14px}
+.lbl-dim{color:rgba(255,255,255,.4)}
+.h2{font-size:clamp(1.9rem,2.8vw,2.55rem);font-weight:800;letter-spacing:-1.2px;line-height:1.1;color:#1a1a1a}
+.h2-wit{color:#fff}
+.lead{font-size:.95rem;color:#606060;line-height:1.75;max-width:520px;margin-top:14px;display:block}
+.lead-dim{color:rgba(255,255,255,.5)}
+
+/* ── KNOPPEN ── */
+.bo{display:inline-flex;align-items:center;gap:8px;background:#E8490F;color:#fff;padding:13px 26px;border-radius:7px;font-size:14px;font-weight:700;border:2px solid #E8490F;line-height:1;transition:background .18s,transform .15s;cursor:pointer}
+.bo:hover{background:#c03a08;border-color:#c03a08;transform:translateY(-1px)}
+.bw{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:13px 26px;border-radius:7px;font-size:14px;font-weight:700;border:2px solid rgba(255,255,255,.3);line-height:1;transition:border-color .18s,background .18s}
+.bw:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.bz{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1a1a1a;padding:13px 26px;border-radius:7px;font-size:14px;font-weight:700;border:2px solid #e5e3de;line-height:1;transition:border-color .18s,box-shadow .18s}
+.bz:hover{border-color:#1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+/* ── HEADER ── */
+#header{position:fixed;top:0;left:0;right:0;z-index:9999;height:72px;background:rgba(17,17,17,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center}
+.h-inner{width:100%;max-width:1100px;margin:0 auto;padding:0 60px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.h-logo img{height:64px;width:auto;max-width:260px;object-fit:contain}
+.h-logo-txt{display:flex;flex-direction:column;line-height:1.2}
+.h-logo-naam{font-size:15px;font-weight:800;color:#fff;letter-spacing:-.3px}
+.h-logo-sub{font-size:10px;color:rgba(255,255,255,.4)}
+.h-nav{display:flex;align-items:center;gap:4px;list-style:none}
+.h-nav a{display:block;padding:8px 14px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.6);border-radius:7px;transition:color .18s,background .18s}
+.h-nav a:hover,.h-nav a.actief{color:#fff;background:rgba(255,255,255,.07)}
+.h-nav a.actief{color:#E8490F;background:rgba(232,73,15,.1)}
+.h-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.h-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
+.h-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.h-burger.open span:nth-child(2){opacity:0}
+.h-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.h-mobiel{display:none;position:fixed;top:70px;left:0;right:0;background:#111;border-bottom:1px solid rgba(255,255,255,.08);padding:16px 24px 24px;z-index:9998;flex-direction:column;gap:4px}
+.h-mobiel.open{display:flex}
+.h-mobiel a{display:block;padding:12px 14px;font-size:15px;font-weight:700;color:rgba(255,255,255,.7);border-radius:8px;transition:color .18s,background .18s}
+.h-mobiel a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.spacer{height:72px}
+
+/* ── HERO ── */
+#s-hero{background:#111;padding:60px 0 80px;position:relative;overflow:hidden}
+#s-hero::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40%;background:linear-gradient(135deg,transparent,rgba(232,73,15,.07));pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(232,73,15,.1);border:1px solid rgba(232,73,15,.25);color:rgba(232,73,15,.9);font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:24px;white-space:nowrap}
+.hdot{width:5px;height:5px;background:#E8490F;border-radius:50%;animation:hdot 2s infinite;flex-shrink:0}
+@keyframes hdot{0%,100%{opacity:1}50%{opacity:.25}}
+.hero-grid h1{font-size:clamp(2.5rem,4vw,3.8rem);font-weight:800;color:#fff;letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
+.hero-grid h1 span{color:#E8490F}
+.hero-sub{font-size:.975rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:440px;margin-bottom:36px;display:block}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero-merken{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,.08)}
+.m-lbl{font-size:9.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.m-tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:11.5px;font-weight:800;letter-spacing:.8px;padding:5px 13px;border-radius:5px}
+.hero-foto{width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#222;display:flex;align-items:center;justify-content:center;position:relative}
+.hero-foto img{width:100%;height:100%;object-fit:cover}
+.hero-foto-ph{display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.25}
+.hero-foto-ph-txt{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero-foto-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.6));padding:20px 20px 16px;display:flex;justify-content:space-between;align-items:flex-end}
+.hero-foto-naam{font-size:13px;font-weight:800;color:#fff}
+.hero-foto-sub{font-size:10.5px;color:rgba(255,255,255,.6);margin-top:2px;display:block}
+.hero-foto-badge{background:#E8490F;color:#fff;font-size:10px;font-weight:800;padding:5px 10px;border-radius:5px;white-space:nowrap}
+
+/* ── DIENSTEN ── */
+.d-header{margin-bottom:48px}
+.d-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.d{background:#fff;padding:30px 26px;border:1.5px solid #e5e3de;border-radius:14px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.d:hover{border-color:#E8490F;transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,73,15,.07)}
+.d-ico{font-size:28px;margin-bottom:16px;display:block;line-height:1}
+.d-tit{font-size:1rem;font-weight:800;color:#1a1a1a;letter-spacing:-.3px;margin-bottom:9px;display:block}
+.d-txt{font-size:13px;color:#606060;line-height:1.65;display:block}
+.d-psa{background:#111;border-color:#E8490F;grid-column:1/-1;padding:34px 32px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;border-radius:14px}
+.d-psa:hover{background:#1a1a1a;transform:none;box-shadow:none}
+.d-psa-tag{display:inline-block;background:#E8490F;color:#fff;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 9px;border-radius:4px;margin-bottom:12px}
+.d-psa .d-tit{color:#fff;font-size:1.15rem}
+.d-psa .d-txt{color:rgba(255,255,255,.45);max-width:500px}
+.psa-ml{display:flex;flex-direction:column;gap:7px;flex-shrink:0}
+.psa-m{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:11px;font-weight:800;letter-spacing:1px;padding:7px 16px;border-radius:6px;text-align:center}
+.psa-m-or{background:rgba(232,73,15,.12);border-color:rgba(232,73,15,.25);color:rgba(232,73,15,.8)}
+.d-meer-btns{display:flex;gap:12px;justify-content:center;margin-top:28px}
+.d-cta{margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:28px 32px;background:#f7f6f3;border-radius:12px;border:1px solid #e5e3de}
+.d-cta-t{font-size:.975rem;font-weight:700;display:block}
+.d-cta-s{font-size:13px;color:#606060;margin-top:4px;display:block}
+.d-cta-b{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ── REVIEWS ── */
+#s-reviews{background:#f7f6f3;padding:96px 0;overflow:hidden}
+.rev-header{margin-bottom:52px}
+.rev-slider-wrap{overflow:hidden}
+.rev-track{display:flex;gap:20px;transition:transform .42s cubic-bezier(.4,0,.2,1)}
+.rev-kaart{background:#fff;border:1.5px solid #e5e3de;border-radius:16px;padding:32px 28px;flex:0 0 calc(33.333% - 14px);min-width:0;transition:border-color .2s,box-shadow .2s}
+.rev-kaart:hover{border-color:#E8490F;box-shadow:0 6px 24px rgba(232,73,15,.09)}
+.rev-sterren{display:flex;gap:3px;margin-bottom:20px}
+.rev-ster{color:#E8490F;font-size:19px;line-height:1}
+.rev-quote{font-size:2.5rem;color:#E8490F;line-height:.8;margin-bottom:12px;display:block;font-family:Georgia,serif}
+.rev-tekst{font-size:14px;color:#444;line-height:1.75;margin-bottom:24px}
+.rev-footer{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid #f0eeea}
+.rev-avatar{width:40px;height:40px;min-width:40px;border-radius:50%;background:#E8490F;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0}
+.rev-naam{font-size:13.5px;font-weight:800;color:#1a1a1a}
+.rev-detail{font-size:11.5px;color:#aaa;margin-top:2px;display:block}
+.rev-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px}
+.rev-pijl{width:42px;height:42px;border-radius:50%;background:#fff;border:1.5px solid #e5e3de;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#1a1a1a;transition:border-color .18s,background .18s;line-height:1}
+.rev-pijl:hover{border-color:#E8490F;background:#E8490F;color:#fff}
+.rev-dots{display:flex;gap:7px;align-items:center}
+.rev-dot{width:8px;height:8px;border-radius:50%;background:#d0cec8;cursor:pointer;transition:background .18s,transform .18s}
+.rev-dot.actief{background:#E8490F;transform:scale(1.3)}
+.rev-score-balk{display:flex;align-items:center;gap:24px;margin-top:48px;background:#fff;border-radius:14px;padding:24px 32px;flex-wrap:wrap;border:1px solid #e5e3de}
+.rev-score-num{font-size:3.2rem;font-weight:800;color:#1a1a1a;letter-spacing:-3px;line-height:1;flex-shrink:0}
+.rev-score-sterren{display:flex;gap:3px;margin-bottom:5px}
+.rev-score-lbl{font-size:13px;color:#888}
+.rev-score-lbl strong{color:#1a1a1a;font-weight:700}
+.rev-google{display:flex;align-items:center;gap:8px;margin-left:auto;background:#f7f6f3;border:1px solid #e5e3de;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;color:#444;cursor:pointer;transition:border-color .18s,background .18s;text-decoration:none}
+.rev-google:hover{border-color:#E8490F;background:#fff4f1;color:#E8490F}
+
+/* ── B2B ── */
+.b2b-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.b2b-punten{list-style:none;margin-top:28px}
+.b2b-punten li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.55}
+.b2b-punten li:last-child{border-bottom:none}
+.b2b-ico{width:44px;height:44px;min-width:44px;background:#E8490F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;margin-top:1px;box-shadow:0 4px 14px rgba(232,73,15,.3)}
+.b2b-punten strong{color:#fff;display:block;font-weight:700;margin-bottom:2px}
+.b2b-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.b2b-logo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.b2b-logo{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:rgba(255,255,255,.3);text-align:center;padding:12px;transition:border-color .2s,background .2s;line-height:1.4}
+.b2b-logo:hover{border-color:rgba(232,73,15,.4);background:rgba(232,73,15,.06)}
+
+/* ── OVER ONS ── */
+.over-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.over-foto-wrap{position:relative}
+.over-foto{width:100%;aspect-ratio:4/3;background:#2a2a2a;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.over-foto img{width:100%;height:100%;object-fit:cover}
+.over-foto-ph{display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.2}
+.over-foto-ph-txt{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.over-badge{position:absolute;bottom:-16px;right:-16px;background:#E8490F;border-radius:12px;padding:20px 22px;text-align:center;box-shadow:0 12px 30px rgba(232,73,15,.25)}
+.ob-num{display:block;font-size:2.3rem;font-weight:800;color:#fff;letter-spacing:-2px;line-height:1}
+.ob-lbl{display:block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.8);margin-top:3px}
+.over-body{font-size:14px;color:#606060;line-height:1.8;margin-top:12px;display:block}
+.over-lijst{list-style:none;margin-top:20px}
+.over-lijst li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;font-size:14px;color:#1a1a1a;border-bottom:1px solid #e5e3de;line-height:1.5}
+.over-lijst li:last-child{border-bottom:none}
+.vink{width:18px;height:18px;min-width:18px;background:#E8490F;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;flex-shrink:0}
+.vink::after{content:'✓';color:#fff;font-size:9.5px;font-weight:800}
+.over-btns{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}
+
+/* ── AANBOD ── */
+.aanbod-top{margin-bottom:36px}
+.aanbod-top .lbl{display:block;margin-bottom:10px}
+.w-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wagen{border:1px solid #e5e3de;border-radius:12px;overflow:hidden;background:#fff;transition:transform .2s,border-color .2s,box-shadow .2s;cursor:pointer}
+.wagen:hover{transform:translateY(-3px);border-color:#E8490F;box-shadow:0 12px 30px rgba(232,73,15,.09)}
+.w-img{position:relative;background:#1a1a1a;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.w-img img{width:100%;height:100%;object-fit:cover}
+.w-ph{font-size:44px;opacity:.08}
+.w-merk-tag{position:absolute;top:10px;left:10px;background:#E8490F;color:#fff;font-size:9px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.w-km{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.6);color:rgba(255,255,255,.8);font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:4px}
+.w-body{padding:16px 16px 18px}
+.w-brand{font-size:9.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#E8490F;margin-bottom:2px;display:block}
+.w-model{font-size:.95rem;font-weight:800;color:#1a1a1a;letter-spacing:-.3px;margin-bottom:9px;display:block}
+.w-specs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.w-spec{font-size:12px;color:#999}
+.w-dot{font-size:10px;color:#ccc}
+.w-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f0eeea;padding-top:12px}
+.w-prijs{font-size:1.2rem;font-weight:800;color:#1a1a1a;letter-spacing:-.4px}
+.w-nota{font-size:10.5px;color:#aaa;display:block;margin-top:1px}
+.w-link{font-size:12px;font-weight:700;color:#E8490F;background:none;border:none;cursor:pointer;padding:0;font-family:'Plus Jakarta Sans',sans-serif}
+.aanbod-meer-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.aanbod-leeg{background:#f7f6f3;border-radius:12px;padding:38px 28px;text-align:center;border:1.5px dashed #e5e3de;margin-top:18px}
+.aanbod-leeg p{color:#888;font-size:13.5px;margin-bottom:18px;display:block}
+.laden{grid-column:1/-1;text-align:center;padding:60px 20px;color:#aaa;font-size:14px}
+.ldot{display:inline-block;width:8px;height:8px;background:#E8490F;border-radius:50%;margin:0 3px;animation:ldot 1.2s infinite}
+.ldot:nth-child(2){animation-delay:.2s}
+.ldot:nth-child(3){animation-delay:.4s}
+@keyframes ldot{0%,80%,100%{opacity:.2;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
+.laad-fout{grid-column:1/-1;background:#fff0ee;border:1px solid #ffd0c0;border-radius:12px;padding:28px;text-align:center;color:#c03a08;font-size:14px}
+
+/* ── CONTACT ── */
+.c-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start}
+.c-info{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:32px 28px}
+.c-info-tit{font-size:1.15rem;font-weight:800;color:#fff;letter-spacing:-.4px;margin-bottom:22px;display:block}
+.c-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.c-item:last-child{border-bottom:none;padding-bottom:0}
+.c-ico{width:44px;height:44px;min-width:44px;background:#E8490F;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 14px rgba(232,73,15,.3)}
+.c-lbl{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:4px;display:block}
+.c-val{font-size:13.5px;color:#fff;font-weight:600;line-height:1.55;display:block}
+a.c-val:hover{color:#E8490F}
+.uren{margin-top:4px;display:grid;grid-template-columns:110px 1fr;gap:3px 12px}
+.u-dag{color:rgba(255,255,255,.4);font-size:12px;padding:2px 0}
+.u-tijd{color:rgba(255,255,255,.75);font-weight:600;font-size:12px;padding:2px 0}
+.u-gest{color:rgba(255,255,255,.22);font-size:12px;padding:2px 0}
+.c-map{margin-top:20px;border-radius:10px;overflow:hidden;height:175px}
+.c-map iframe{width:100%;height:100%;border:none;display:block}
+.c-form{background:#fff;border-radius:14px;padding:32px 28px}
+.c-form-tit{font-size:1.2rem;font-weight:800;letter-spacing:-.4px;color:#1a1a1a;margin-bottom:4px;display:block}
+.c-form-sub{font-size:13px;color:#888;margin-bottom:22px;display:block}
+.f-rij{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.fld{margin-bottom:12px;display:block}
+.fld label{display:block;font-size:9.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#999;margin-bottom:5px}
+.fld input,.fld select,.fld textarea{display:block;width:100%;padding:11px 13px;border:1.5px solid #e5e3de;border-radius:8px;font-size:13.5px;font-family:'Plus Jakarta Sans',sans-serif;color:#1a1a1a;background:#faf9f7;outline:none;transition:border-color .18s;-webkit-appearance:none;appearance:none;line-height:1.5}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:#E8490F;background:#fff}
+.fld textarea{resize:vertical;min-height:105px}
+.vstuur{display:block;width:100%;background:#E8490F;color:#fff;border:none;border-radius:8px;padding:13px;font-size:14px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background .18s,transform .15s;margin-top:4px}
+.vstuur:hover{background:#c03a08;transform:translateY(-1px)}
+#gdc-fb{display:none;margin-top:10px;font-size:12.5px;text-align:center;padding:9px 12px;border-radius:7px}
+
+/* ── FOOTER ── */
+#footer{background:#111;border-top:1px solid rgba(255,255,255,.07)}
+.f-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;padding:56px 0 44px;border-bottom:1px solid rgba(255,255,255,.07)}
+.f-omschr{font-size:13.5px;color:rgba(255,255,255,.4);line-height:1.75;max-width:300px;margin-bottom:20px;display:block}
+.f-btw{display:inline-block;font-size:11px;font-weight:700;color:rgba(255,255,255,.25);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;padding:4px 10px;margin-top:16px}
+.f-col-tit{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px;display:block}
+.f-nav{list-style:none}
+.f-nav li{margin-bottom:10px}
+.f-nav a{font-size:13.5px;color:rgba(255,255,255,.5);transition:color .18s;display:inline-block}
+.f-nav a:hover{color:#E8490F}
+.f-contact-items{display:flex;flex-direction:column;gap:10px}
+.f-contact-item{display:flex;align-items:flex-start;gap:12px}
+.f-contact-ico{font-size:18px;width:22px;min-width:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;filter:brightness(0) invert(1);opacity:1}
+.f-contact-txt{font-size:13px;color:rgba(255,255,255,.5);line-height:1.55}
+a.f-contact-txt:hover{color:#E8490F}
+.f-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;flex-wrap:wrap}
+.f-copy{font-size:12.5px;color:rgba(255,255,255,.25)}
+
+
+/* Verkochte wagens */
+.wagen.verkocht{opacity:1;cursor:default}
+.wagen.verkocht .w-img::after{content:'';position:absolute;inset:0;background:rgba(30,30,30,.72);z-index:1}
+.wagen.verkocht .w-img-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;background:#1a1a1a;color:#fff;font-size:13px;font-weight:800;letter-spacing:1px;padding:8px 20px;border-radius:6px;border:2px solid rgba(255,255,255,.3);white-space:nowrap}
+.wagen.verkocht .w-prijs{color:#888;text-decoration:line-through}
+.wagen.verkocht:hover{transform:none;border-color:#e5e3de;box-shadow:none}
+
+/* ── POPUP ── */
+#popup-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.65);align-items:center;justify-content:center;padding:20px}
+#popup-overlay.open{display:flex}
+#popup{background:#fff;border-radius:16px;width:100%;max-width:780px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 32px 80px rgba(0,0,0,.25);animation:popIn .22s ease}
+@keyframes popIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+#popup-sluit{position:absolute;top:16px;right:16px;width:34px;height:34px;background:#f5f4f1;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:#555;z-index:2}
+#popup-sluit:hover{background:#e5e3de}
+#popup-foto{width:100%;aspect-ratio:16/8;background:#1a1a1a;display:flex;align-items:center;justify-content:center;border-radius:16px 16px 0 0;overflow:hidden;position:relative}
+#popup-foto img{width:100%;height:100%;object-fit:cover}
+#popup-foto-ph{font-size:5rem;opacity:.08}
+#popup-merk-badge{position:absolute;top:16px;left:16px;background:#E8490F;color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;padding:4px 10px;border-radius:5px}
+#popup-body{padding:28px 32px 32px}
+#popup-header{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+#popup-brand{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#E8490F;margin-bottom:4px;display:block}
+#popup-model{font-size:1.6rem;font-weight:800;color:#1a1a1a;letter-spacing:-1px;line-height:1.1}
+#popup-prijs-wrap{text-align:right;flex-shrink:0}
+#popup-prijs{font-size:2rem;font-weight:800;color:#1a1a1a;letter-spacing:-1.5px;line-height:1}
+#popup-nota{font-size:11px;color:#aaa;display:block;margin-top:2px}
+#popup-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.p-spec{background:#f7f6f3;border-radius:10px;padding:14px 16px}
+.p-spec-lbl{font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#aaa;margin-bottom:4px;display:block}
+.p-spec-val{font-size:14px;font-weight:700;color:#1a1a1a;display:block}
+#popup-omschr{margin-bottom:24px}
+#popup-omschr-tit,#popup-extra-tit{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:10px;display:block}
+#popup-omschr-txt{font-size:14px;color:#555;line-height:1.75}
+#popup-extra{margin-bottom:24px}
+.p-extra-lijst{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.p-extra-item{font-size:13px;color:#444;display:flex;align-items:center;gap:7px}
+.p-extra-item::before{content:'✓';color:#E8490F;font-weight:800;font-size:11px;flex-shrink:0}
+#popup-btns{display:flex;gap:12px;flex-wrap:wrap;padding-top:20px;border-top:1px solid #f0eeea}
+
+
+/* Popup fotogalerij */
+.popup-pijl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:none;color:#fff;font-size:20px;width:40px;height:40px;border-radius:50%;cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center;transition:background .18s}
+.popup-pijl:hover{background:rgba(232,73,15,.8)}
+.popup-pijl-l{left:12px}
+.popup-pijl-r{right:12px}
+.popup-foto-teller{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:10px;z-index:3}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .w{padding:0 32px}
+  .h-inner{padding:0 32px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-foto{display:none}
+  .d-grid{grid-template-columns:1fr 1fr}
+  .d-psa{grid-column:auto;grid-template-columns:1fr}
+  .psa-ml{flex-direction:row;flex-wrap:wrap}
+  .rev-kaart{flex:0 0 calc(50% - 10px)}
+  .b2b-grid{grid-template-columns:1fr;gap:48px}
+  .b2b-logo-grid{grid-template-columns:1fr 1fr 1fr}
+  .over-grid{grid-template-columns:1fr;gap:44px}
+  .over-badge{bottom:-14px;right:10px}
+  .w-grid{grid-template-columns:1fr 1fr}
+  .c-grid{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr 1fr;gap:36px}
+  #popup-specs{grid-template-columns:1fr 1fr}
+  .p-extra-lijst{grid-template-columns:1fr}
+  .h-nav{display:none}
+  .h-burger{display:flex}
+}
+@media(max-width:600px){
+  .w{padding:0 20px}
+  .h-inner{padding:0 20px}
+  .sec{padding:64px 0}
+  #s-hero{padding:56px 0 60px}
+  .d-grid,.w-grid{grid-template-columns:1fr}
+  .d-psa{grid-column:auto}
+  .rev-kaart{flex:0 0 100%}
+  .b2b-logo-grid{grid-template-columns:1fr 1fr}
+  .f-rij{grid-template-columns:1fr}
+  .c-form,.c-info{padding:24px 18px}
+  .d-cta{padding:22px 18px}
+  .f-top{grid-template-columns:1fr;gap:28px;padding:40px 0 36px}
+  .f-bottom{flex-direction:column;align-items:flex-start}
+  .uren{grid-template-columns:85px 1fr}
+  #popup-body{padding:20px}
+  #popup-specs{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="h-inner">
+    <a href="#s-hero" class="h-logo" style="display:flex;align-items:center;gap:14px;text-decoration:none">
+      <img src="https://res.cloudinary.com/rrju5nl0/image/upload/v1785681025/eurorepar_icon_1080_db3pya.png" alt="Eurorepar" style="height:48px;width:auto;object-fit:contain;flex-shrink:0">
+      <div style="display:flex;flex-direction:column;line-height:1.25;border-left:1px solid rgba(255,255,255,.2);padding-left:14px">
+        <span style="font-size:16px;font-weight:800;color:#fff;letter-spacing:-.2px;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap">Garage De Cocker</span>
+        <span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.5px;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap">Erembodegem &mdash; Aalst</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="h-nav">
+        <li><a href="#s-hero" class="actief" id="nav-home">Home</a></li>
+        <li><a href="#s-diensten" id="nav-diensten">Diensten</a></li>
+        <li><a href="#s-over" id="nav-over">Over ons</a></li>
+        <li><a href="#s-aanbod" id="nav-aanbod">Aanbod</a></li>
+        <li><a href="#s-contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="h-burger" id="burger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="h-mobiel" id="mobiel">
+  <a href="#s-hero" onclick="toggleMenu()">Home</a>
+  <a href="#s-diensten" onclick="toggleMenu()">Diensten</a>
+  <a href="#s-over" onclick="toggleMenu()">Over ons</a>
+  <a href="#s-aanbod" onclick="toggleMenu()">Aanbod</a>
+  <a href="#s-contact" onclick="toggleMenu()">Contact</a>
+</nav>
+<div class="spacer"></div>
+
+<!-- POPUP -->
+<div id="popup-overlay" onclick="sluitPopup(event)">
+  <div id="popup">
+    <button id="popup-sluit" onclick="sluitPopup()">&#10005;</button>
+    <div id="popup-foto"><div id="popup-foto-ph">&#128663;</div><span id="popup-merk-badge"></span></div>
+    <div id="popup-body">
+      <div id="popup-header">
+        <div><span id="popup-brand"></span><div id="popup-model"></div></div>
+        <div id="popup-prijs-wrap"><div id="popup-prijs"></div><span id="popup-nota">Incl. BTW</span></div>
+      </div>
+      <div id="popup-specs"></div>
+      <div id="popup-omschr"><span id="popup-omschr-tit">Omschrijving</span><p id="popup-omschr-txt"></p></div>
+      <div id="popup-extra"><span id="popup-extra-tit">Uitrusting</span><ul class="p-extra-lijst" id="popup-extra-lijst"></ul></div>
+      <div id="popup-btns">
+        <a href="#s-contact" class="bo" onclick="sluitPopup()">Afspraak maken</a>
+        <a href="tel:+3253700154" class="bz">&#128222; 053 70 01 54</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="s-hero">
+  <div class="w">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-pill"><span class="hdot"></span>Erkend Eurorepar Car Service partner &mdash; Erembodegem (Aalst)</div>
+        <h1>Uw wagen in<br><span>goede handen.</span></h1>
+        <span class="hero-sub">Al meer dan 25 jaar is Garage De Cocker d&eacute; specialist voor Citro&euml;n, Peugeot en DS in Aalst en omstreken. Vandaag kan u voor elk merk ook bij ons terecht!</span>
+        <div class="hero-btns">
+          <a href="#s-contact" class="bo">Afspraak maken</a>
+          <a href="#s-aanbod" class="bw">Ons aanbod</a>
+        </div>
+        <div class="hero-merken">
+          <span class="m-lbl">Specialist in:</span>
+          <span class="m-tag">CITRO&Euml;N</span>
+          <span class="m-tag">PEUGEOT</span>
+          <span class="m-tag">DS</span>
+        </div>
+      </div>
+      <div class="hero-foto">
+        <img src="https://res.cloudinary.com/rrju5nl0/image/upload/v1785667816/Garage_De_COcker_yqo1nu.webp" alt="Garage De Cocker — Brusselbaan 191 Erembodegem" loading="eager">
+        <div class="hero-foto-overlay">
+          <div><span class="hero-foto-naam">Garage De Cocker</span><span class="hero-foto-sub">Brusselbaan 191, Erembodegem</span></div>
+          <span class="hero-foto-badge">Eurorepar partner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIENSTEN -->
+<section id="s-diensten" class="sec sec-wt">
+  <div class="w">
+    <div class="d-header">
+      <span class="lbl">Wat wij voor u kunnen betekenen</span>
+      <h2 class="h2">Eerlijke service, van kleine<br>beurt tot grote herstelling.</h2>
+      <span class="lead">U legt uit wat er speelt. Wij bekijken het, leggen u uit wat er nodig is, en doen enkel wat effectief moet. Geen overbodige kosten of verrassingen op de factuur.</span>
+    </div>
+    <div class="d-grid">
+      <div class="d d-psa">
+        <div>
+          <span class="d-psa-tag">Onze specialisatie</span>
+          <span class="d-tit">PSA-specialist &mdash; Citro&euml;n, Peugeot, DS</span>
+          <span class="d-txt">Citro&euml;n, Peugeot of DS? Dan bent u bij ons aan het juiste adres. Wij zijn erkend specialist voor het PSA-gamma en beschikken over offici&euml;le diagnosesoftware en originele onderdelen.</span>
+        </div>
+        <div class="psa-ml">
+          <div class="psa-m">CITRO&Euml;N</div><div class="psa-m">PEUGEOT</div><div class="psa-m">DS</div><div class="psa-m psa-m-or">EUROREPAR</div>
+        </div>
+      </div>
+      <div class="d"><span class="d-ico">&#128295;</span><span class="d-tit">Onderhoud en Service</span><span class="d-txt">Wij voeren uw onderhoud uit volgens de fabrieksrichtlijnen, met originele of gelijkwaardige onderdelen. Zo blijft uw wagen in topconditie, ongeacht het merk of model.</span></div>
+      <div class="d"><span class="d-ico">&#128269;</span><span class="d-tit">Diagnose en storingslampen</span><span class="d-txt">Brandt er een lampje of klinkt er iets niet vertrouwd? Wij lezen uw wagen grondig uit en vertellen u in gewone taal wat er aan de hand is.</span></div>
+      <div class="d"><span class="d-ico">&#128683;</span><span class="d-tit">Remmen en veiligheidscontrole</span><span class="d-txt">Uw remmen zijn geen punt om op te bezuinigen. Wij controleren uw remsysteem grondig en vervangen enkel wat effectief aan vervanging toe is.</span></div>
+      <div class="d"><span class="d-ico">&#9889;</span><span class="d-tit">Elektrische systemen</span><span class="d-txt">Batterijproblemen, startproblemen of storingen in de elektronica? Wij traceren het probleem nauwkeurig en lossen het definitief op.</span></div>
+      <div class="d"><span class="d-ico">&#128260;</span><span class="d-tit">Ophanging en stuurinrichting</span><span class="d-txt">Trekt uw wagen naar &eacute;&eacute;n kant of stuitert hij? Wij inspecteren uw volledige onderstel en herstellen wat nodig is.</span></div>
+      <div class="d"><span class="d-ico">&#9881;</span><span class="d-tit">Koppeling en transmissie</span><span class="d-txt">Een koppeling die slipt of een versnellingsbak die hapert zijn problemen die u best niet uitstelt. Wij pakken het grondig aan.</span></div>
+      <div class="d dienst-extra" style="display:none"><span class="d-ico">&#10052;</span><span class="d-tit">Airconditioning</span><span class="d-txt">Koeling die niet werkt of een airco met slechte geur? Wij controleren, ontsmetten en vullen uw airconditioning bij voor aangenaam rijcomfort.</span></div>
+      <div class="d dienst-extra" style="display:none"><span class="d-ico">&#128663;</span><span class="d-tit">Banden en velgen</span><span class="d-txt">Van bandenwissels tot uitlijning &mdash; wij zorgen dat uw wagen veilig en stabiel de weg op gaat met de juiste banden voor elk seizoen.</span></div>
+      <div class="d dienst-extra" style="display:none"><span class="d-ico">&#128196;</span><span class="d-tit">Keuring en voorbereiding</span><span class="d-txt">Wij bereiden uw wagen grondig voor op de technische keuring zodat u zonder verrassingen door de controle rijdt.</span></div>
+    </div>
+    <div class="d-meer-btns">
+      <button class="bz" id="d-btn-meer" onclick="dToonMeer()" style="padding:13px 36px">Toon meer diensten</button>
+      <button class="bz" id="d-btn-minder" onclick="dToonMinder()" style="padding:13px 36px;display:none">Toon minder</button>
+    </div>
+    <div class="d-cta">
+      <div>
+        <span class="d-cta-t">Niet zeker wat uw wagen nodig heeft?</span>
+        <span class="d-cta-s">Bel ons gerust. Wij denken met u mee en geven u een eerlijk antwoord, zonder dat u meteen een afspraak hoeft te maken.</span>
+      </div>
+      <div class="d-cta-b">
+        <a href="tel:+3253700154" class="bz">&#128222; 053 70 01 54</a>
+        <a href="#s-contact" class="bz">Contactformulier</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="s-reviews">
+  <div class="w">
+    <div class="rev-header">
+      <span class="lbl">Wat klanten over ons zeggen</span>
+      <h2 class="h2">Vertrouwen bouw je op<br>met eerlijk werk.</h2>
+      <span class="lead" style="margin:14px 0 0">Onze beste reclame zijn onze klanten. Hieronder een greep uit wat mensen over ons schrijven.</span>
+    </div>
+    <div class="rev-slider-wrap">
+      <div class="rev-track" id="rev-track">
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Al jaren kom ik hier voor mijn Citro&euml;n. Ze kennen mijn wagen, leggen alles duidelijk uit en rekenen een eerlijke prijs. Nergens anders naartoe.</p><div class="rev-footer"><div class="rev-avatar">M</div><div><span class="rev-naam">Marie V.</span><span class="rev-detail">Vaste klant &mdash; Aalst</span></div></div></div>
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Mijn Peugeot had een storingsmelding. Bij de dealer moest ik drie weken wachten. Hier was ik de volgende dag geholpen, met duidelijke uitleg.</p><div class="rev-footer"><div class="rev-avatar">T</div><div><span class="rev-naam">Thomas D.</span><span class="rev-detail">Google recensie</span></div></div></div>
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Occasion gekocht bij Garage De Cocker. Alles klopte precies zoals beschreven. Geen gedoe, geen verborgen problemen. Een aanrader voor iedereen in de regio Aalst.</p><div class="rev-footer"><div class="rev-avatar">K</div><div><span class="rev-naam">Kevin M.</span><span class="rev-detail">Google recensie</span></div></div></div>
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Eindelijk een garage waar ze u behandelen zoals een mens en niet als een nummer. Vriendelijk, professioneel en de prijs was precies wat ze hadden gezegd.</p><div class="rev-footer"><div class="rev-avatar">S</div><div><span class="rev-naam">Sophie L.</span><span class="rev-detail">Google recensie</span></div></div></div>
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Mijn bedrijfswagen staat altijd klaar dankzij Garage De Cocker. Ze begrijpen dat ik mijn wagen nodig heb en werken snel en degelijk.</p><div class="rev-footer"><div class="rev-avatar">P</div><div><span class="rev-naam">Peter V.D.</span><span class="rev-detail">Zelfstandige &mdash; Erembodegem</span></div></div></div>
+        <div class="rev-kaart"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div><span class="rev-quote">&#8220;</span><p class="rev-tekst">Voor mijn DS5 moest ik iemand hebben met de specifieke diagnoseapparatuur. Garage De Cocker had het en loste het probleem meteen op.</p><div class="rev-footer"><div class="rev-avatar">L</div><div><span class="rev-naam">Lore B.</span><span class="rev-detail">Google recensie</span></div></div></div>
+      </div>
+    </div>
+    <div class="rev-nav">
+      <button class="rev-pijl" onclick="revSchuif(-1)">&#8592;</button>
+      <div class="rev-dots" id="rev-dots"></div>
+      <button class="rev-pijl" onclick="revSchuif(1)">&#8594;</button>
+    </div>
+    <div class="rev-score-balk">
+      <div class="rev-score-num">4.6</div>
+      <div><div class="rev-score-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster" style="opacity:.5">&#9733;</span></div><span class="rev-score-lbl">Gemiddelde score &mdash; <strong>Google Reviews</strong></span></div>
+      <a href="https://www.google.com/search?q=GARAGE+DE+COCKER+B.V.B.A.+Reviews&tbm=lcl#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="rev-google" style="margin-left:auto">&#9733; Bekijk alle Google reviews</a>
+      <a href="#s-contact" class="bo" style="font-size:13px;padding:10px 20px">Laat een review achter</a>
+    </div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section id="s-b2b" class="sec sec-zw">
+  <div class="w">
+    <div class="b2b-grid">
+      <div>
+        <span class="lbl" style="color:rgba(255,255,255,.4)">Voor bedrijven en leasing</span>
+        <h2 class="h2 h2-wit">Ook voor uw wagenpark<br>en leasingvoertuigen.</h2>
+        <span class="lead" style="color:rgba(255,255,255,.5);max-width:440px">Garage De Cocker is een erkende onderhoudspartner voor bedrijfswagens, vlootbeheer en voertuigen onder leasingcontract.</span>
+        <ul class="b2b-punten">
+          <li><div class="b2b-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div><div><strong>Erkend leasingpartner</strong>Wij werken samen met de voornaamste leasingmaatschappijen voor onderhoud en herstellingen.</div></li>
+          <li><div class="b2b-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v7a2 2 0 0 1-2 2h-1"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 3v5h8"/></svg></div><div><strong>Vlootbeheer voor KMO&apos;s</strong>Meerdere bedrijfswagens? Wij beheren uw volledige wagenpark &mdash; &eacute;&eacute;n aanspreekpunt voor alles.</div></li>
+          <li><div class="b2b-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></div><div><strong>Volledige administratie</strong>Facturen op bedrijfsnaam, communicatie met uw leasingmaatschappij &mdash; wij regelen alles voor u.</div></li>
+          <li><div class="b2b-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><div><strong>Alle merken</strong>Citro&euml;n, Peugeot, DS of een ander merk &mdash; uw chauffeurs komen allemaal bij ons terecht.</div></li>
+        </ul>
+        <div class="b2b-btns">
+          <a href="#s-contact" class="bo">Neem contact op</a>
+          <a href="tel:+3253700154" class="bz" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.15)">&#128222; 053 70 01 54</a>
+        </div>
+      </div>
+      <div>
+        <span style="display:block;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:20px">Bedrijven die ons vertrouwen</span>
+        <div class="b2b-logo-grid">
+          <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
+          <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
+          <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVER ONS -->
+<section id="s-over" class="sec sec-gr">
+  <div class="w">
+    <div class="over-grid">
+      <div class="over-foto-wrap">
+        <div class="over-foto"><div class="over-foto-ph"><span style="font-size:3rem">&#128295;</span><span class="over-foto-ph-txt">Foto werkplaats hier</span></div></div>
+        <div class="over-badge"><span class="ob-num">25+</span><span class="ob-lbl">Jaar<br>ervaring</span></div>
+      </div>
+      <div>
+        <span class="lbl">Over ons</span>
+        <h2 class="h2">Geen groot bedrijf.<br>Wel mensen die u kent.</h2>
+        <span class="over-body">Garage De Cocker is een familiebedrijf op de Brusselbaan in Erembodegem, op vijf minuten van het centrum van Aalst. We werken met een klein, vast team, wat betekent dat u altijd weet met wie u te maken hebt.</span>
+        <span class="over-body" style="margin-top:10px">Bij ons staat een persoonlijke aanpak centraal. U spreekt met de mensen die effectief aan uw wagen werken. U krijgt een duidelijke uitleg, een eerlijke prijs, en een service die volledig afgestemd is op wat u nodig hebt.</span>
+        <ul class="over-lijst">
+          <li><span class="vink"></span>Familiebedrijf met al meer dan 25 jaar ervaring in Erembodegem</li>
+          <li><span class="vink"></span>Erkend Citro&euml;n, Peugeot en DS specialist</li>
+          <li><span class="vink"></span>Officieel Eurorepar Car Service partner</li>
+          <li><span class="vink"></span>Persoonlijk contact: u weet altijd wie aan uw wagen werkt</li>
+          <li><span class="vink"></span>Makkelijk bereikbaar via de Brusselbaan</li>
+        </ul>
+        <div class="over-btns">
+          <a href="#s-contact" class="bo">Afspraak maken</a>
+          <a href="tel:+3253700154" class="bz">&#128222; 053 70 01 54</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AANBOD -->
+<section id="s-aanbod" class="sec sec-wt">
+  <div class="w">
+    <div class="aanbod-top">
+      <span class="lbl">Ons aanbod</span>
+      <h2 class="h2">Tweedehandswagens<br>zonder verborgen gebreken.</h2>
+      <span class="lead">Elke wagen in ons aanbod is nagekeken door onze eigen techniekers. Wat er staat, staat er omdat wij er zelf achter staan. Scherp geprijsd en rijklaar.</span>
+    </div>
+    <div class="w-grid" id="wagens-grid">
+      <div class="laden"><span class="ldot"></span><span class="ldot"></span><span class="ldot"></span><p style="margin-top:16px">Wagenpark wordt geladen...</p></div>
+    </div>
+    <div class="aanbod-meer-btns" id="aanbod-btns" style="display:none">
+      <button class="bz" id="btn-meer" onclick="toonMeer()" style="padding:13px 36px">Toon meer wagens</button>
+      <button class="bz" id="btn-minder" onclick="toonMinder()" style="padding:13px 36px;display:none">Toon minder</button>
+    </div>
+    <div class="aanbod-leeg">
+      <p>Staat uw ideale wagen er niet tussen? Vertel ons wat u zoekt en wij contacteren u zodra er iets passends op ons terrein staat.</p>
+      <a href="#s-contact" class="bo">Ik zoek een specifieke wagen</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="s-contact" class="sec sec-zw">
+  <div class="w">
+    <span class="lbl lbl-dim">Garage De Cocker &mdash; Erembodegem (Aalst)</span>
+    <h2 class="h2 h2-wit" style="margin-bottom:12px">Kom langs of stuur een bericht.</h2>
+    <span class="lead lead-dim" style="margin-bottom:36px;display:block">U wordt niet doorverbonden. U spreekt meteen met iemand van het team.</span>
+    <div class="c-grid">
+      <div class="c-info">
+        <span class="c-info-tit">Contactgegevens</span>
+        <div>
+          <div class="c-item"><div class="c-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><span class="c-lbl">Adres</span><span class="c-val">Brusselbaan 191<br>9320 Erembodegem</span></div></div>
+          <div class="c-item"><div class="c-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 5.72 5.72l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.21 16z"/></svg></div><div><span class="c-lbl">Telefoon</span><a href="tel:+3253700154" class="c-val">053 70 01 54</a></div></div>
+          <div class="c-item"><div class="c-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><span class="c-lbl">Email</span><a class="c-val" href="mailto:garagedecocker@telenet.be">garagedecocker@telenet.be</a></div></div>
+          <div class="c-item"><div class="c-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div>
+            <span class="c-lbl">Openingsuren</span>
+            <div class="uren">
+              <span class="u-dag">Ma tot Do</span><span class="u-tijd">08:00&ndash;12:30 | 13:30&ndash;18:30</span>
+              <span class="u-dag">Vrijdag</span><span class="u-tijd">08:00&ndash;12:30 | 13:30&ndash;18:00</span>
+              <span class="u-dag">Za en Zo</span><span class="u-gest">Gesloten</span>
+            </div>
+          </div></div>
+        </div>
+        <div class="c-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.5!2d4.026!3d50.921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3bda1060aad95%3A0xf5fafe22b386a3eb!2sGarage%20De%20Cocker!5e0!3m2!1snl!2sbe!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+      <div class="c-form">
+        <span class="c-form-tit">Stel uw vraag of maak een afspraak</span>
+        <span class="c-form-sub">Elk bericht wordt persoonlijk gelezen en zo snel mogelijk beantwoord.</span>
+        <div class="f-rij">
+          <div class="fld"><label>Voornaam</label><input type="text" id="gf-vn" placeholder="Jan"></div>
+          <div class="fld"><label>Achternaam</label><input type="text" id="gf-nm" placeholder="Janssen"></div>
+        </div>
+        <div class="f-rij">
+          <div class="fld"><label>Email</label><input type="email" id="gf-em" placeholder="jan@voorbeeld.be"></div>
+          <div class="fld"><label>Telefoon</label><input type="tel" id="gf-tel" placeholder="0475 00 00 00"></div>
+        </div>
+        <div class="fld">
+          <label>Onderwerp</label>
+          <select id="gf-ond">
+            <option value="">Kies een onderwerp</option>
+            <option>Afspraak onderhoud of herstelling</option>
+            <option>Vraag over een wagen in ons aanbod</option>
+            <option>Leasingvoertuig &mdash; onderhoud of herstelling</option>
+            <option>Vlootbeheer voor mijn bedrijf</option>
+            <option>Prijsofferte aanvragen</option>
+            <option>Diagnose of keuring</option>
+            <option>Andere vraag</option>
+          </select>
+        </div>
+        <div class="fld"><label>Uw wagen (optioneel)</label><input type="text" id="gf-wag" placeholder="bv. Citro&euml;n C3 2021"></div>
+        <div class="fld"><label>Bericht</label><textarea id="gf-ber" placeholder="Beschrijf uw vraag of probleem zo duidelijk mogelijk"></textarea></div>
+        <button class="vstuur" onclick="verstuur()">Bericht versturen</button>
+        <div id="gdc-fb"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="w">
+    <div class="f-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
+          <img src="https://res.cloudinary.com/rrju5nl0/image/upload/v1785681025/eurorepar_icon_1080_db3pya.png" alt="Eurorepar" style="height:52px;width:auto;object-fit:contain">
+          <div style="display:flex;flex-direction:column;line-height:1.2;border-left:1px solid rgba(255,255,255,.15);padding-left:14px">
+            <span style="font-size:16px;font-weight:800;color:#fff;letter-spacing:-.2px;font-family:'Plus Jakarta Sans',sans-serif">Garage De Cocker</span>
+            <span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.5px;font-family:'Plus Jakarta Sans',sans-serif">Erembodegem &mdash; Aalst</span>
+          </div>
+        </div>
+        <span class="f-omschr">Uw vertrouwde garage in Erembodegem. Specialist in Citro&euml;n, Peugeot en DS &mdash; ook voor alle andere merken.</span>
+        <span class="f-btw">BTW BE0870.022.395</span>
+      </div>
+      <div>
+        <span class="f-col-tit">Navigatie</span>
+        <ul class="f-nav">
+          <li><a href="#s-hero">Home</a></li>
+          <li><a href="#s-diensten">Diensten</a></li>
+          <li><a href="#s-over">Over ons</a></li>
+          <li><a href="#s-aanbod">Aanbod</a></li>
+          <li><a href="#s-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="f-col-tit">Contact</span>
+        <div class="f-contact-items">
+          <div class="f-contact-item"><span class="f-contact-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="f-contact-txt">Brusselbaan 191<br>9320 Erembodegem</span></div>
+          <div class="f-contact-item"><span class="f-contact-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 5.72 5.72l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.21 16z"/></svg></span><a href="tel:+3253700154" class="f-contact-txt">053 70 01 54</a></div>
+          <div class="f-contact-item"><span class="f-contact-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><a class="f-contact-txt" href="mailto:garagedecocker@telenet.be">garagedecocker@telenet.be</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span class="f-copy">&copy; 2026 Garage De Cocker bvba &mdash; Alle rechten voorbehouden</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Smooth scroll ── */
+document.querySelectorAll('a[href^="#s-"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var el=document.getElementById(this.getAttribute('href').slice(1));
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+/* ── Hamburger ── */
+function toggleMenu(){
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mobiel').classList.toggle('open');
+}
+
+/* ── Actieve nav ── */
+(function(){
+  var s=['s-hero','s-diensten','s-reviews','s-b2b','s-over','s-aanbod','s-contact'];
+  var m={'s-hero':'nav-home','s-diensten':'nav-diensten','s-reviews':'nav-diensten','s-b2b':'nav-diensten','s-over':'nav-over','s-aanbod':'nav-aanbod','s-contact':'nav-contact'};
+  function upd(){
+    var y=window.scrollY+90,a='s-hero';
+    s.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=y)a=id;});
+    document.querySelectorAll('.h-nav a').forEach(function(x){x.classList.remove('actief');});
+    var n=document.getElementById(m[a]);if(n)n.classList.add('actief');
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('load',upd);
+})();
+
+/* ── Diensten ── */
+function dToonMeer(){document.querySelectorAll('.dienst-extra').forEach(function(e){e.style.display='block';});document.getElementById('d-btn-meer').style.display='none';document.getElementById('d-btn-minder').style.display='inline-flex';}
+function dToonMinder(){document.querySelectorAll('.dienst-extra').forEach(function(e){e.style.display='none';});document.getElementById('d-btn-meer').style.display='inline-flex';document.getElementById('d-btn-minder').style.display='none';}
+
+/* ── Review slider ── */
+var revIdx=0,revZ=3;
+function revUpdate(){
+  var k=document.querySelectorAll('.rev-kaart'),b=document.getElementById('rev-track').parentElement.offsetWidth;
+  revZ=b<600?1:b<900?2:3;
+  var max=Math.max(0,k.length-revZ),kb=(b-(revZ-1)*20)/revZ;
+  if(revIdx>max)revIdx=max;
+  document.getElementById('rev-track').style.transform='translateX(-'+(revIdx*(kb+20))+'px)';
+  var d=document.getElementById('rev-dots');d.innerHTML='';
+  for(var i=0;i<=max;i++){var s=document.createElement('span');s.className='rev-dot'+(i===revIdx?' actief':'');s.setAttribute('data-i',i);s.onclick=function(){revIdx=parseInt(this.getAttribute('data-i'));revUpdate();};d.appendChild(s);}
+}
+function revSchuif(r){var max=Math.max(0,document.querySelectorAll('.rev-kaart').length-revZ);revIdx=Math.max(0,Math.min(revIdx+r,max));revUpdate();}
+window.addEventListener('load',revUpdate);
+window.addEventListener('resize',revUpdate);
+
+/* ── Wagens ── */
+var CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTQHeKg3NHLq9FI6F7MKTV4qy9lvI9kpOYf9zedYeOuLEF-vV_loeGdnDMgDXY-IZjBrAWuZ9mphVLN/pub?gid=1769145125&single=true&output=csv',PER=6,alle=[],getoond=0;
+
+function laadWagens(){
+  if(!CSV||CSV.indexOf('UW_GOOGLE')===0){alle=demoData();renderWagens();return;}
+
+  // Directe fetch van Google Sheets — geen proxy nodig
+  // Google Sheets pub CSV ondersteunt CORS voor publieke sheets
+  fetch(CSV, {mode:'cors',cache:'no-cache'})
+    .then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      return r.text();
+    })
+    .then(function(tekst){
+      var wagens=parseCSV(tekst);
+      alle=wagens.length>0?wagens:demoData();
+      renderWagens();
+    })
+    .catch(function(){
+      // Fallback: probeer zonder mode instelling
+      fetch(CSV)
+        .then(function(r){return r.text();})
+        .then(function(tekst){
+          var wagens=parseCSV(tekst);
+          alle=wagens.length>0?wagens:demoData();
+          renderWagens();
+        })
+        .catch(function(){
+          alle=demoData();
+          renderWagens();
+        });
+    });
+}
+
+function parseJSON(json){
+  var w=[];
+  if(!json||!json.length)return w;
+  json.forEach(function(rij,i){
+    var merk=rij['Merk']||rij['merk']||'';
+    var model=rij['Model']||rij['model']||'';
+    if(!merk||!model)return;
+    var fotos=[];
+    for(var f=1;f<=10;f++){
+      var url=rij["Foto's ("+f+")"]||rij['Foto '+f]||rij['foto_'+f]||rij['Fotos '+f]||'';
+      if(url&&url.trim())fotos.push(gdriveDirect(url.trim()));
+    }
+    // Zoek ook kolommen die "foto" bevatten
+    Object.keys(rij).forEach(function(k){
+      if(k.toLowerCase().indexOf('foto')>=0&&fotos.length<10){
+        var v=rij[k];
+        if(v&&v.trim()&&fotos.indexOf(gdriveDirect(v.trim()))<0){
+          fotos.push(gdriveDirect(v.trim()));
+        }
+      }
+    });
+    w.push({
+      id:i+1,
+      merk:merk.trim(),
+      model:model.trim(),
+      jaar:(rij['Jaar']||rij['jaar']||'').trim(),
+      km:fmtK((rij['Kilometerstand']||rij['km']||rij['Km']||'').trim()),
+      brandstof:(rij['Brandstof']||rij['brandstof']||'').trim(),
+      bak:(rij['Versnellingsbak']||rij['bak']||'').trim(),
+      kleur:(rij['Kleur']||rij['kleur']||'').trim(),
+      pk:(rij['Vermogen (PK)']||rij['pk']||rij['PK']||'').trim(),
+      prijs:fmtP((rij['Prijs incl. BTW (€)']||rij['Prijs']||rij['prijs']||'').trim()),
+      uitrusting:(rij['Uitrusting']||rij['uitrusting']||'').trim().split(',').map(function(u){return u.trim();}).filter(Boolean),
+      omschr:(rij['Omschrijving']||rij['omschrijving']||'').trim(),
+      fotos:fotos,
+      verkocht:(rij['Status']||rij['status']||'').trim().toLowerCase()==='verkocht'
+    });
+  });
+  return w;
+}
+
+function parseCSV(t){
+  var l=t.trim().split('\n'),w=[];
+  if(l.length<2)return w;
+
+  // Lees de header rij en maak een kolomindex
+  var header=splitRij(l[0]).map(function(h){return h.trim();});
+  function kol(naam){
+    var n=naam.toLowerCase().replace(/['']/g,"'");
+    for(var i=0;i<header.length;i++){
+      var h=header[i].toLowerCase().replace(/['']/g,"'");
+      if(h===n)return i;
+    }
+    return -1;
+  }
+
+  // Exacte kolomnamen van het Google Form
+  var iMerk=kol('Merk');
+  var iModel=kol('Model');
+  var iJaar=kol('Jaar');
+  var iKm=kol('Kilometerstand');
+  var iBrandstof=kol('Brandstof');
+  var iBak=kol('Versnellingsbak');
+  var iKleur=kol('Kleur');
+  var iPK=kol('Vermogen (PK)');
+  var iPrijs=kol('Prijs (incl. BTW)');
+  var iUitrusting=kol('Uitrusting');
+  var iOmschr=kol('Omschrijving');
+  var iFotos=kol("Foto's Wagen");
+  if(iFotos<0)iFotos=kol("Foto’s Wagen");
+  if(iFotos<0){
+    // Zoek elke kolom die "foto" bevat
+    for(var fi=0;fi<header.length;fi++){
+      if(header[fi].toLowerCase().indexOf('foto')>=0){iFotos=fi;break;}
+    }
+  }
+  var iStatus=kol('Status');
+
+  for(var i=1;i<l.length;i++){
+    var k=splitRij(l[i]);
+    if(iMerk<0||!k[iMerk]||!k[iMerk].trim())continue;
+
+    // Foto's: staan als komma-gescheiden URLs in 1 cel, of als Google Drive URLs
+    var fotosTekst=iFotos>=0?(k[iFotos]||''):'';
+    var fotos=[];
+    if(fotosTekst.trim()){
+      // Kan meerdere URLs zijn gescheiden door komma of newline
+      var fotoLijst=fotosTekst.split(/[,\n]+/);
+      fotoLijst.forEach(function(url){
+        url=url.trim();
+        if(url)fotos.push(gdriveDirect(url));
+      });
+    }
+
+    w.push({
+      id:i,
+      merk:(k[iMerk]||'').trim(),
+      model:(k[iModel>=0?iModel:iMerk+1]||'').trim(),
+      jaar:(k[iJaar>=0?iJaar:iMerk+2]||'').trim(),
+      km:fmtK((k[iKm>=0?iKm:iMerk+3]||'').trim()),
+      brandstof:(k[iBrandstof>=0?iBrandstof:iMerk+4]||'').trim(),
+      bak:(k[iBak>=0?iBak:iMerk+5]||'').trim(),
+      kleur:(k[iKleur>=0?iKleur:iMerk+6]||'').trim(),
+      pk:(k[iPK>=0?iPK:iMerk+7]||'').trim(),
+      prijs:fmtP((k[iPrijs>=0?iPrijs:iMerk+8]||'').trim()),
+      uitrusting:(k[iUitrusting>=0?iUitrusting:iMerk+9]||'').trim().split(',').map(function(u){return u.trim();}).filter(Boolean),
+      omschr:(k[iOmschr>=0?iOmschr:iMerk+10]||'').trim(),
+      fotos:fotos,
+      verkocht:iStatus>=0?(k[iStatus]||'').trim().toLowerCase()==='verkocht':false
+    });
+  }
+  return w;
+}
+
+function gdriveDirect(url){
+  // Converteer Google Drive deellink naar directe afbeeldings-URL
+  var m=url.match(/[-\w]{25,}/);
+  if(!m)return url;
+  // Probeer eerst de id uit /d/ID/ te halen
+  var m2=url.match(/\/d\/([\w-]+)/);
+  var id=m2?m2[1]:m[0];
+  return 'https://drive.google.com/uc?export=view&id='+id;
+}
+
+function splitRij(r){var a=[],c='',q=false;for(var i=0;i<r.length;i++){var ch=r[i];if(ch==='"'){q=!q;}else if(ch===','&&!q){a.push(c);c='';}else{c+=ch;}}a.push(c);return a;}
+function fmtK(v){var n=parseInt(v.replace(/\D/g,''),10);return isNaN(n)?v:n.toLocaleString('nl-BE')+' km';}
+function fmtP(v){var n=parseInt(v.replace(/\D/g,''),10);return isNaN(n)?v:'\u20AC'+n.toLocaleString('nl-BE');}
+
+function renderWagens(){
+  document.getElementById('wagens-grid').innerHTML='';
+  getoond=0;
+  // Sorteer: actieve wagens eerst, verkochte achteraan
+  alle.sort(function(a,b){return a.verkocht-b.verkocht;});
+  toonMeer();
+}
+
+function maakKaart(w){
+  var hoofdfoto=w.fotos.length?w.fotos[0]:'';
+  var verkochtBadge=w.verkocht?'<div class="w-img-badge">Verkocht</div>':'';
+  var foto=hoofdfoto
+    ?'<img src="'+hoofdfoto+'" alt="'+w.merk+' '+w.model+'" loading="lazy" onerror="this.style.display=\'none\'">'
+    :'<div class="w-ph">&#128663;</div>';
+  var klikbaar=w.verkocht?'':'onclick="openPopup('+w.id+')"';
+  return '<div class="wagen'+(w.verkocht?' verkocht':'')+'" '+klikbaar+'>'
+    +'<div class="w-img">'+foto
+    +'<span class="w-merk-tag">'+w.merk+'</span>'
+    +(w.km?'<span class="w-km">'+w.km+'</span>':'')
+    +verkochtBadge
+    +'</div>'
+    +'<div class="w-body">'
+    +'<span class="w-brand">'+w.merk.toUpperCase()+'</span>'
+    +'<span class="w-model">'+w.model+'</span>'
+    +'<div class="w-specs">'
+    +'<span class="w-spec">'+w.jaar+'</span>'
+    +(w.brandstof?'<span class="w-dot">&middot;</span><span class="w-spec">'+w.brandstof+'</span>':'')
+    +(w.bak?'<span class="w-dot">&middot;</span><span class="w-spec">'+w.bak+'</span>':'')
+    +'</div>'
+    +'<div class="w-foot">'
+    +'<div><div class="w-prijs">'+(w.verkocht?w.prijs:'<strong>'+w.prijs+'</strong>')+'</div>'
+    +'<span class="w-nota">'+(w.verkocht?'Verkocht':'Incl. BTW')+'</span></div>'
+    +(w.verkocht?'':'<button class="w-link" onclick="event.stopPropagation();openPopup('+w.id+')">Meer info</button>')
+    +'</div></div></div>';
+}
+
+function toonMeer(){
+  var g=document.getElementById('wagens-grid');
+  var e=Math.min(getoond+PER,alle.length);
+  for(var i=getoond;i<e;i++)g.insertAdjacentHTML('beforeend',maakKaart(alle[i]));
+  getoond=e;
+  var wrap=document.getElementById('aanbod-btns');
+  var bM=document.getElementById('btn-meer');
+  var bL=document.getElementById('btn-minder');
+  // Toon knoppenrij alleen als er meer dan 6 wagens zijn
+  if(alle.length<=PER){wrap.style.display='none';}
+  else{
+    wrap.style.display='flex';
+    bM.style.display=getoond>=alle.length?'none':'inline-flex';
+    bL.style.display=getoond>PER?'inline-flex':'none';
+    if(getoond<alle.length)bM.textContent='Toon meer wagens ('+(alle.length-getoond)+' resterend)';
+  }
+}
+
+function toonMinder(){
+  document.getElementById('wagens-grid').innerHTML='';
+  getoond=0;
+  toonMeer();
+  document.getElementById('s-aanbod').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ── Popup met fotogalerij ── */
+var popupFotos=[],popupFotoIdx=0;
+
+function openPopup(id){
+  var w=alle.find(function(x){return x.id===id;});
+  if(!w||w.verkocht)return;
+  popupFotos=w.fotos;
+  popupFotoIdx=0;
+
+  // Fotogalerij
+  var fE=document.getElementById('popup-foto');
+  if(popupFotos.length){
+    fE.innerHTML='<img id="popup-foto-img" src="'+popupFotos[0]+'" alt="'+w.merk+' '+w.model+'" onerror="this.style.display=\'none\'">'
+      +(popupFotos.length>1?'<button class="popup-pijl popup-pijl-l" onclick="popupFotoSchuif(-1)">&#8592;</button><button class="popup-pijl popup-pijl-r" onclick="popupFotoSchuif(1)">&#8594;</button>':'')
+      +'<span id="popup-merk-badge">'+w.merk+'</span>'
+      +(popupFotos.length>1?'<span class="popup-foto-teller"><span id="popup-foto-nr">1</span>/'+popupFotos.length+'</span>':'');
+  } else {
+    fE.innerHTML='<div id="popup-foto-ph">&#128663;</div><span id="popup-merk-badge">'+w.merk+'</span>';
+  }
+
+  document.getElementById('popup-brand').textContent=w.merk.toUpperCase();
+  document.getElementById('popup-model').textContent=w.model;
+  document.getElementById('popup-prijs').textContent=w.prijs;
+  document.getElementById('popup-specs').innerHTML=
+    '<div class="p-spec"><span class="p-spec-lbl">Jaar</span><span class="p-spec-val">'+w.jaar+'</span></div>'
+    +'<div class="p-spec"><span class="p-spec-lbl">Kilometerstand</span><span class="p-spec-val">'+w.km+'</span></div>'
+    +'<div class="p-spec"><span class="p-spec-lbl">Brandstof</span><span class="p-spec-val">'+w.brandstof+'</span></div>'
+    +'<div class="p-spec"><span class="p-spec-lbl">Versnellingsbak</span><span class="p-spec-val">'+w.bak+'</span></div>'
+    +'<div class="p-spec"><span class="p-spec-lbl">Kleur</span><span class="p-spec-val">'+(w.kleur||'/')+'</span></div>'
+    +'<div class="p-spec"><span class="p-spec-lbl">Vermogen</span><span class="p-spec-val">'+(w.pk?w.pk+' pk':'/')+'</span></div>';
+  document.getElementById('popup-omschr-txt').textContent=w.omschr||'Contacteer ons voor meer informatie.';
+  document.getElementById('popup-extra-lijst').innerHTML=w.uitrusting.length
+    ?w.uitrusting.map(function(u){return'<li class="p-extra-item">'+u+'</li>';}).join('')
+    :'<li class="p-extra-item">Contacteer ons voor de uitrustingslijst.</li>';
+  document.getElementById('popup-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function popupFotoSchuif(r){
+  popupFotoIdx=Math.max(0,Math.min(popupFotoIdx+r,popupFotos.length-1));
+  document.getElementById('popup-foto-img').src=popupFotos[popupFotoIdx];
+  document.getElementById('popup-foto-nr').textContent=popupFotoIdx+1;
+}
+
+function sluitPopup(e){
+  if(e&&e.target!==document.getElementById('popup-overlay'))return;
+  document.getElementById('popup-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')sluitPopup();
+  if(e.key==='ArrowRight'&&popupFotos.length)popupFotoSchuif(1);
+  if(e.key==='ArrowLeft'&&popupFotos.length)popupFotoSchuif(-1);
+});
+
+/* ── Email bescherming ── */
+(function(){
+  var em='garagedecocker'+'@'+'telenet.be';
+  var els=['em-link','f-em-link'];
+  els.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){el.href='mailto:'+em;el.textContent=em;}
+  });
+})();
+
+function demoData(){return[
+  {id:1,merk:'Citro\u00EBn',model:'C3 Feel 1.2 PureTech',jaar:'2022',km:'48.200 km',brandstof:'Benzine',bak:'Automaat',kleur:'Grijs',pk:'83',prijs:'\u20AC16.900',uitrusting:['Airco','Bluetooth','Cruise control','Parkeersensoren'],omschr:'Demo wagen.',fotos:[],verkocht:false},
+  {id:2,merk:'Peugeot',model:'308 Allure 1.5 BlueHDi',jaar:'2021',km:'72.500 km',brandstof:'Diesel',bak:'Manueel',kleur:'Wit',pk:'130',prijs:'\u20AC19.500',uitrusting:['Navigatie','Apple CarPlay','Verwarmde voorstoelen'],omschr:'Demo wagen.',fotos:[],verkocht:false},
+  {id:3,merk:'DS',model:'DS3 Crossback',jaar:'2023',km:'31.000 km',brandstof:'Elektrisch',bak:'Automaat',kleur:'Parelwit',pk:'136',prijs:'\u20AC28.900',uitrusting:['360\u00B0 camera','Lederen bekleding'],omschr:'Demo wagen.',fotos:[],verkocht:true}
+];}
+
+laadWagens();
+</script>
+</body>
+</html>
