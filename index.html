@@ -837,15 +837,25 @@ function parseCSV(t){
     var k=splitRij(l[i]);
     if(iMerk<0||!k[iMerk]||!k[iMerk].trim())continue;
 
-    // Foto's: staan als komma-gescheiden URLs in 1 cel, of als Google Drive URLs
+    // Foto's: staan als gescheiden URLs in 1 cel
+    // Gebruik | als scheidingsteken (komma conflicteert met CSV)
     var fotosTekst=iFotos>=0?(k[iFotos]||''):'';
     var fotos=[];
     if(fotosTekst.trim()){
-      // Kan meerdere URLs zijn gescheiden door komma of newline
-      var fotoLijst=fotosTekst.split(/[,\n]+/);
+      // Splits op | of newline (niet op komma want dat breekt de CSV)
+      var fotoLijst=fotosTekst.split(/[|\n]+/);
+      // Als er maar 1 item is maar het bevat http meerdere keren, splits op http
+      if(fotoLijst.length===1&&fotosTekst.indexOf('http',5)>0){
+        fotoLijst=fotosTekst.split(/(https?:\/\/)/);
+        var herbouw=[];
+        for(var fi=1;fi<fotoLijst.length;fi+=2){
+          herbouw.push(fotoLijst[fi]+(fotoLijst[fi+1]||''));
+        }
+        if(herbouw.length>0)fotoLijst=herbouw;
+      }
       fotoLijst.forEach(function(url){
         url=url.trim();
-        if(url)fotos.push(gdriveDirect(url));
+        if(url&&url.indexOf('http')===0)fotos.push(gdriveDirect(url));
       });
     }
 
@@ -870,13 +880,20 @@ function parseCSV(t){
 }
 
 function gdriveDirect(url){
-  // Converteer Google Drive deellink naar directe afbeeldings-URL
-  var m=url.match(/[-\w]{25,}/);
-  if(!m)return url;
-  // Probeer eerst de id uit /d/ID/ te halen
-  var m2=url.match(/\/d\/([\w-]+)/);
-  var id=m2?m2[1]:m[0];
-  return 'https://drive.google.com/uc?export=view&id='+id;
+  if(!url||!url.trim())return '';
+  url=url.trim();
+  // Cloudinary URLs direct teruggeven — geen conversie nodig
+  if(url.indexOf('cloudinary.com')>=0)return url;
+  // Gewone afbeelding URLs ook direct teruggeven
+  if(url.match(/\.(jpg|jpeg|png|webp|gif)(\?|$)/i))return url;
+  // Extraheer Google Drive bestand ID
+  var id='';
+  var m1=url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  var m2=url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+  if(m1)id=m1[1];
+  else if(m2)id=m2[1];
+  else return url;
+  return 'https://drive.google.com/thumbnail?id='+id+'&sz=w800';
 }
 
 function splitRij(r){var a=[],c='',q=false;for(var i=0;i<r.length;i++){var ch=r[i];if(ch==='"'){q=!q;}else if(ch===','&&!q){a.push(c);c='';}else{c+=ch;}}a.push(c);return a;}
