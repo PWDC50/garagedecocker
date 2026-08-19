@@ -118,16 +118,25 @@ img{display:block;max-width:100%}
 .rev-header{margin-bottom:52px}
 .rev-slider-wrap{overflow:hidden}
 .rev-track{display:flex;gap:20px;transition:transform .42s cubic-bezier(.4,0,.2,1)}
-.rev-kaart{background:#fff;border:1.5px solid #e5e3de;border-radius:16px;padding:32px 28px;flex:0 0 calc(33.333% - 14px);min-width:0;transition:border-color .2s,box-shadow .2s}
-.rev-kaart:hover{border-color:#E8490F;box-shadow:0 6px 24px rgba(232,73,15,.09)}
-.rev-sterren{display:flex;gap:3px;margin-bottom:20px}
-.rev-ster{color:#E8490F;font-size:19px;line-height:1}
-.rev-quote{font-size:2.5rem;color:#E8490F;line-height:.8;margin-bottom:12px;display:block;font-family:Georgia,serif}
-.rev-tekst{font-size:14px;color:#444;line-height:1.75;margin-bottom:24px}
-.rev-footer{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid #f0eeea}
-.rev-avatar{width:40px;height:40px;min-width:40px;border-radius:50%;background:#E8490F;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;flex-shrink:0}
-.rev-naam{font-size:13.5px;font-weight:800;color:#1a1a1a}
-.rev-detail{font-size:11.5px;color:#aaa;margin-top:2px;display:block}
+/* Review grid */
+.rev-grid{display:grid;grid-template-columns:2fr 3fr;gap:14px;margin-bottom:40px}
+.rev-rechts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rev-kaart{background:#fff;border:1.5px solid #e5e3de;border-radius:14px;padding:22px 20px;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.rev-kaart:hover{border-color:#E8490F;box-shadow:0 6px 20px rgba(232,73,15,.08)}
+.rev-kaart-groot{background:#fff;border:1.5px solid #e5e3de;border-radius:14px;padding:28px 26px;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column}
+.rev-kaart-groot:hover{border-color:#E8490F;box-shadow:0 6px 20px rgba(232,73,15,.08)}
+.rev-sterren{display:flex;gap:3px;margin-bottom:12px}
+.rev-ster{color:#E8490F;font-size:15px;line-height:1}
+.rev-datum{font-size:11px;color:#bbb;font-weight:500}
+.rev-sterren-rij{display:flex;align-items:center;margin-bottom:12px}
+.rev-tekst{font-size:13px;color:#444;line-height:1.7;flex:1}
+.rev-tekst-groot{font-size:14px;color:#444;line-height:1.75;flex:1;margin-bottom:20px}
+.rev-footer{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #f0eeea;margin-top:auto}
+.rev-avatar{width:34px;height:34px;min-width:34px;border-radius:50%;background:#E8490F;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;flex-shrink:0}
+.rev-naam{font-size:13px;font-weight:800;color:#1a1a1a}
+.rev-detail{font-size:11px;color:#aaa;margin-top:2px;display:block}
+@media(max-width:900px){.rev-grid{grid-template-columns:1fr}.rev-rechts{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.rev-rechts{grid-template-columns:1fr}}
 .rev-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px}
 .rev-pijl{width:42px;height:42px;border-radius:50%;background:#fff;border:1.5px solid #e5e3de;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#1a1a1a;transition:border-color .18s,background .18s;line-height:1}
 .rev-pijl:hover{border-color:#E8490F;background:#E8490F;color:#fff}
@@ -430,7 +439,7 @@ a.f-contact-txt:hover{color:#E8490F}
   <div class="w">
     <div class="d-header">
       <span class="lbl">Wat wij voor u kunnen betekenen</span>
-      <h2 class="h2">Eerlijke service, van kleine<br>beurt tot grote herstelling.</h2>
+      <h2 class="h2">Eerlijke service, van kleine beurt tot grote herstelling.</h2>
       <span class="lead">U legt uit wat er speelt. Wij bekijken het, leggen u uit wat er nodig is, en doen enkel wat effectief moet. Geen overbodige kosten of verrassingen op de factuur.</span>
     </div>
     <div class="d-grid">
@@ -476,70 +485,49 @@ a.f-contact-txt:hover{color:#E8490F}
   <div class="w">
     <div class="rev-header">
       <span class="lbl">Wat klanten over ons zeggen</span>
-      <h2 class="h2">Hoe klanten ons<br>omschrijven.</h2>
-      <span class="lead" style="margin:14px 0 0">In eigen woorden, rechtstreeks van Google.</span>
+      <h2 class="h2">Vertrouwen bouw je op met eerlijk werk.</h2>
+      <span class="lead" style="margin:14px 0 0">Onze beste reclame zijn onze klanten. Hieronder een greep uit wat mensen over ons schrijven.</span>
     </div>
-
-    <div class="kw-grid">
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Nauwkeurige diagnose</span>
-          <span class="kw-tag">Vakmanschap</span>
-          <span class="kw-tag">Eerlijke prijs</span>
+    <div class="rev-grid">
+      <!-- Bruno groot links -->
+      <div class="rev-kaart-groot">
+        <div class="rev-sterren-rij">
+          <div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
+          
         </div>
-        <div class="kw-naam">Bruno De Lantsheer &mdash; Aalst</div>
+        <p class="rev-tekst-groot">Na een lange zoektocht hebben zij direct de juiste diagnose gesteld. Geen gokwerk, maar gerichte oplossingen. Duidelijke uitleg en een eerlijke prijs zonder verrassingen. Proefrit voor &eacute;n na de reparatie om zeker te zijn dat alles klopte. Als je een garage zoekt die het probleem &eacute;&eacute;cht oplost, dan is Garage De Cocker de juiste keuze!</p>
+        <div class="rev-footer">
+          <div class="rev-avatar">B</div>
+          <div><span class="rev-naam">Bruno De Lantsheer</span><span class="rev-detail">Google recensie</span></div>
+        </div>
       </div>
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Uitstekende service</span>
+      <!-- 4 kleine rechts in 2x2 grid -->
+      <div class="rev-rechts">
+        <div class="rev-kaart">
+          <div class="rev-sterren-rij"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div></div>
+          <p class="rev-tekst">Uitstekende service.</p>
+          <div class="rev-footer"><div class="rev-avatar">T</div><div><span class="rev-naam">Tony Van Langenhoven</span><span class="rev-detail">Google recensie</span></div></div>
         </div>
-        <div class="kw-naam">Tony Van Langenhoven</div>
-      </div>
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Vriendelijk</span>
-          <span class="kw-tag">Behulpzaam</span>
-          <span class="kw-tag">Goede service</span>
+        <div class="rev-kaart">
+          <div class="rev-sterren-rij"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div></div>
+          <p class="rev-tekst">Heel erg vriendelijk en behulpzaam en goede service voor uw wagen.</p>
+          <div class="rev-footer"><div class="rev-avatar">E</div><div><span class="rev-naam">Els Deleeuw</span><span class="rev-detail">Google recensie</span></div></div>
         </div>
-        <div class="kw-naam">Els Deleeuw</div>
-      </div>
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Eerlijk</span>
-          <span class="kw-tag">Sympathiek</span>
-          <span class="kw-tag">Top service</span>
+        <div class="rev-kaart">
+          <div class="rev-sterren-rij"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div></div>
+          <p class="rev-tekst">Eerlijke mens. Heel sympathiek. Top service.</p>
+          <div class="rev-footer"><div class="rev-avatar">N</div><div><span class="rev-naam">Njeck Franka</span><span class="rev-detail">Google recensie</span></div></div>
         </div>
-        <div class="kw-naam">Njeck Franka</div>
-      </div>
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Zeer goede service</span>
-          <span class="kw-tag">Vriendelijk personeel</span>
+        <div class="rev-kaart">
+          <div class="rev-sterren-rij"><div class="rev-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div></div>
+          <p class="rev-tekst">Goede service, vriendelijke mensen, een aanrader. Plezante sfeer.</p>
+          <div class="rev-footer"><div class="rev-avatar">F</div><div><span class="rev-naam">Filemon Van Herreweghe</span><span class="rev-detail">Google recensie</span></div></div>
         </div>
-        <div class="kw-naam">Van Gerwen Hedwig</div>
-      </div>
-      <div class="kw-kaart">
-        <div class="kw-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span></div>
-        <div class="kw-tags">
-          <span class="kw-tag">Aanrader</span>
-          <span class="kw-tag">Plezante sfeer</span>
-          <span class="kw-tag">Vriendelijke mensen</span>
-        </div>
-        <div class="kw-naam">Filemon Van Herreweghe</div>
       </div>
     </div>
-
     <div class="rev-score-balk">
       <div class="rev-score-num">4.6</div>
-      <div>
-        <div class="rev-score-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster" style="opacity:.5">&#9733;</span></div>
-        <span class="rev-score-lbl">Gemiddelde score &mdash; <strong>Google Reviews</strong></span>
-      </div>
+      <div><div class="rev-score-sterren"><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster">&#9733;</span><span class="rev-ster" style="opacity:.5">&#9733;</span></div><span class="rev-score-lbl">Gemiddelde score &mdash; <strong>Google Reviews</strong></span></div>
       <a href="https://www.google.com/search?q=GARAGE+DE+COCKER+B.V.B.A.+Reviews&tbm=lcl#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="rev-google" style="margin-left:auto">&#9733; Bekijk alle Google reviews</a>
       <a href="https://share.google/UMPyGhstI6By8aj7u" target="_blank" rel="noopener" class="bo" style="font-size:13px;padding:10px 20px">Laat een review achter</a>
     </div>
@@ -551,8 +539,8 @@ a.f-contact-txt:hover{color:#E8490F}
   <div class="w">
     <div class="b2b-grid">
       <div>
-        <span class="lbl" style="color:rgba(255,255,255,.4)">Voor bedrijven en leasing</span>
-        <h2 class="h2 h2-wit">Ook voor uw wagenpark<br>en leasingvoertuigen.</h2>
+        <span class="lbl" style="color:#E8490F">Voor bedrijven en leasing</span>
+        <h2 class="h2 h2-wit">Ook voor uw wagenpark en leasingvoertuigen.</h2>
         <span class="lead" style="color:rgba(255,255,255,.5);max-width:440px">Garage De Cocker is een erkende onderhoudspartner voor bedrijfswagens, vlootbeheer en voertuigen onder leasingcontract.</span>
         <ul class="b2b-punten">
           <li><div class="b2b-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div><div><strong>Erkend leasingpartner</strong>Wij werken samen met de voornaamste leasingmaatschappijen voor onderhoud en herstellingen.</div></li>
@@ -568,7 +556,7 @@ a.f-contact-txt:hover{color:#E8490F}
       <div>
         <span style="display:block;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:20px">Bedrijven die ons vertrouwen</span>
         <div class="b2b-logo-grid">
-          <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
+          <div class="b2b-logo">Uw logo hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
           <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
           <div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div><div class="b2b-logo">Uw logo<br>hier</div>
         </div>
@@ -611,7 +599,7 @@ a.f-contact-txt:hover{color:#E8490F}
   <div class="w">
     <div class="aanbod-top">
       <span class="lbl">Ons aanbod</span>
-      <h2 class="h2">Tweedehandswagens<br>zonder verborgen gebreken.</h2>
+      <h2 class="h2">Tweedehandswagens zonder verborgen gebreken.</h2>
       <span class="lead">Elke wagen in ons aanbod is nagekeken door onze eigen techniekers. Wat er staat, staat er omdat wij er zelf achter staan. Scherp geprijsd en rijklaar.</span>
     </div>
     <div class="w-grid" id="wagens-grid">
@@ -631,7 +619,7 @@ a.f-contact-txt:hover{color:#E8490F}
 <!-- CONTACT -->
 <section id="s-contact" class="sec sec-zw">
   <div class="w">
-    <span class="lbl lbl-dim">Garage De Cocker &mdash; Erembodegem (Aalst)</span>
+    <span class="lbl" style="color:#E8490F">Garage De Cocker &mdash; Erembodegem (Aalst)</span>
     <h2 class="h2 h2-wit" style="margin-bottom:12px">Kom langs of stuur een bericht.</h2>
     <span class="lead lead-dim" style="margin-bottom:36px;display:block">U wordt niet doorverbonden. U spreekt meteen met iemand van het team.</span>
     <div class="c-grid">
